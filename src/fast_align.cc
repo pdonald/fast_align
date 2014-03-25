@@ -18,7 +18,6 @@
 #include <cmath>
 #include <utility>
 #include <fstream>
-#include <getopt.h>
 
 #include "src/port.h"
 #include "src/corpus.h"

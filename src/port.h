@@ -21,8 +21,8 @@
 #include <AvailabilityMacros.h>
 #endif
 
-#if defined(__APPLE__) && defined(MAC_OS_X_VERSION_10_9) && \
-  MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_9
+#if (defined(__APPLE__) && defined(MAC_OS_X_VERSION_10_9) && \
+	MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_9) || (defined(_MSC_VER))
 #include <unordered_map>
 #include <functional>
 #else // Assuming older OS X, Linux or similar platforms
@@ -32,6 +32,12 @@ namespace std {
 using tr1::unordered_map;
 using tr1::hash;
 } // namespace std
+#endif
+
+#if defined (__WIN32__) || defined(_MSC_VER)
+#include "src/getopt.h"
+#else
+#include <getopt.h>
 #endif
 
 #endif // FAST_ALIGN_PORT_H_

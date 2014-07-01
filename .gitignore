@@ -14,8 +14,8 @@ fast_align
 *.a
 
 # Visual Studio
-Debug/
-Release/
+Build/
 *.opensdf
 *.sdf
 *.suo
+*.vcxproj.user

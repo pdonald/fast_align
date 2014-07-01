@@ -12,3 +12,10 @@ fast_align
 *.lai
 *.la
 *.a
+
+# Visual Studio
+Debug/
+Release/
+*.opensdf
+*.sdf
+*.suo
